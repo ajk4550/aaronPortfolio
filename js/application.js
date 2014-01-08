@@ -1,24 +1,27 @@
 $(document).ready(function() {
+	// Changing the opacity of the social icons in the footer
 	$(".social-icon").mouseenter(function() {
 		$(this).css("opacity", 1);
 	}).mouseleave(function() {
 		$(this).css("opacity", 0.5);
 	});
 
-		$("#navigation").mouseenter(function() {
-			if ($(document).scrollTop() < 450) {
-				$("#navigation").removeClass("navbar-transparent", 500);
-			}
+// Adding Effect to navbar where it fades back in on mouse over
+	$("#navigation").mouseenter(function() {
+		if ($(document).scrollTop() < 450) {
+			$("#navigation").removeClass("navbar-transparent", 500);
+		}
 	}).mouseleave(function() {
-			if ($(document).scrollTop() < 450) {
-				$("#navigation").addClass("navbar-transparent", 500);
-			}
+		if ($(document).scrollTop() < 450) {
+			$("#navigation").addClass("navbar-transparent", 500);
+		}
 	});
 });
 
 $(document).scroll(function() {
+	// Grabbing the displacement from the top when scrolled and storing as a variable 'y'
 	var y = $(this).scrollTop();
-	// Used for showing the circles
+
 	if (y > 300) {
 		$("#section1").fadeIn();
 	}
@@ -35,21 +38,17 @@ $(document).scroll(function() {
 		$("#section1").css("margin-top", "40px");
 		$("#footer").fadeIn("slow");
 	}
-
 	if (y > 450 && y < 1200) {
 		$("#footer").fadeOut("slow");
 	}
-
 	// Used for displaying the next line 
 	if (y > 600) {
 		$("#section2").fadeIn();
-    
 	}
 	else {
 		// Fade out
 		$("#section2").fadeOut();
 	}
-
 		// Used for displaying the next line 
 	if (y > 1000) {
 		$("#section3").fadeIn();
@@ -61,5 +60,4 @@ $(document).scroll(function() {
 	if (y > 1200) {
 		$("#footer").fadeIn().addClass("navbar-static-bottom");
 	}
-	
 });
