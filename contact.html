@@ -28,55 +28,52 @@
 			</div>
 		</div>
 
-		<h2 class="featurette-heading">Contact</h2>
+		<div class="page-header" style="text-align: center;">
+  		<h1>Contact <small>I would love to hear from you!</small></h1>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-5">
+					<div class="contactGroup">
+						Name <br />
+						<input id="first" type="text" class="contactInput" placeholder="First" />
+						<input id="last" type="text" class="contactInput" placeholder="Last" />
+					</div>
+					<div class="contactGroup">
+						Email <br />
+						<input id="email" type="text" class="contactInput" placeholder="Email" />
+					</div>
+					<div class="contactGroup">
+						Phone Number <br />
+						<input id="dayPhone" type="text" class="contactInput" placeholder="Day Phone Number" />
+						<input id="nightPhone" type="text" class="contactInput" placeholder="Evening Phone Number" />
+					</div>
+
+					<div class="contactGroup">
+						Message
+						<textarea class="contactInput" style="width:440px" rows=10></textarea>
+					</div>
+
+					<div class="well well-lg">
+						<button class="btn btn-primary pull-right" style="margin:-16px;">Send</button> 
+					</div>
+
+				</div>
+				<div class="col-md-2"></div>
+		</div>
 		
 </body>
-
-
 <script>
-// Starts the carousel with 5sec interval
-$('#carousel-example-generic').carousel({
-    interval: 5000
-});
-
-$(document).ready(function() {
-	$(".social-icon").mouseenter(function() {
-		$(this).css("opacity", 1);
-	}).mouseleave(function() {
-		$(this).css("opacity", 0.5);
+	$(document).ready(function() {
+		$(".contactInput").focus(function() {
+			$(this).css("border", "1px solid #35a5e5");
+			$(this).parent().css("background-color", "#aef26d");
+			}).blur(function() {
+				$(this).css("border", "1px solid #ccc");
+				$(this).parent().css("background-color", "white");
+		});
 	});
-});
-
-$(document).scroll(function() {
-	var y = $(this).scrollTop();
-	// Used for showing the circles
-	if (y > 300) {
-		$("#section1").fadeIn();
-	}
-	else {
-		// Fade out
-		$("#section1").fadeOut();
-	}
-
-	// Used for displaying the next line 
-	if (y > 600) {
-		$("#section2").fadeIn();
-    
-	}
-	else {
-		// Fade out
-		$("#section2").fadeOut();
-	}
-
-		// Used for displaying the next line 
-	if (y > 1000) {
-		$("#section3").fadeIn();
-	}
-	else {
-		// Fade out
-		$("#section3").fadeOut();
-	}
-});
-
 </script>
 </html>
