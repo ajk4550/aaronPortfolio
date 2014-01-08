@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-ui.js"></script>
+</head>
+<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a href="#" class="navbar-brand">Aaron Kaye</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target = ".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+						<li class="active"><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Porfolio</a></li>
+						<li><a href="aboutMe.html"><span class="glyphicon glyphicon-pencil"></span> About Me</a></li>
+						<li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="featurette-heading">Portfolio</h2>
+		
+</body>
+
+
+<script>
+// Starts the carousel with 5sec interval
+$('#carousel-example-generic').carousel({
+    interval: 5000
+});
+
+$(document).ready(function() {
+	$(".social-icon").mouseenter(function() {
+		$(this).css("opacity", 1);
+	}).mouseleave(function() {
+		$(this).css("opacity", 0.5);
+	});
+});
+
+$(document).scroll(function() {
+	var y = $(this).scrollTop();
+	// Used for showing the circles
+	if (y > 300) {
+		$("#section1").fadeIn();
+	}
+	else {
+		// Fade out
+		$("#section1").fadeOut();
+	}
+
+	// Used for displaying the next line 
+	if (y > 600) {
+		$("#section2").fadeIn();
+    
+	}
+	else {
+		// Fade out
+		$("#section2").fadeOut();
+	}
+
+		// Used for displaying the next line 
+	if (y > 1000) {
+		$("#section3").fadeIn();
+	}
+	else {
+		// Fade out
+		$("#section3").fadeOut();
+	}
+});
+
+</script>
+</html>
