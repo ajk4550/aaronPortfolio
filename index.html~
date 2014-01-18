@@ -128,7 +128,7 @@
       </div>
       </div>
 
-     <div id="footer" class="navbar navbar-default navbar-static-bottom">
+     <div id="footer" class="navbar navbar-default navbar-fixed-bottom">
 			<div class="container">
 				<p class="navbar-text pull-left">Site Built by Aaron Kaye</p>
 				<a href="#" class="pull-right"><img src="img/li.png" class="social-icon" alt="" /></a>

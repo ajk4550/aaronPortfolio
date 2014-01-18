@@ -51,7 +51,4 @@ $(document).scroll(function() {
 	if (y > 1100) {
 		$("#footer").fadeIn().addClass("navbar-static-bottom");
 	}
-	else {
-	$("#footer").fadeOut();
-	}
 });
