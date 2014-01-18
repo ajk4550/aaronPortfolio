@@ -33,6 +33,3 @@
 #email {
 	width: 440px;
 }
-.navbar-collapse .navbar-nav.navbar-right:last-child {
-	margin-top: 22px;
-}
