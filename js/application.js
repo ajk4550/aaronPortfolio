@@ -5,24 +5,13 @@ $(document).ready(function() {
 	}).mouseleave(function() {
 		$(this).css("opacity", 0.5);
 	});
-
-// Adding Effect to navbar where it fades back in on mouse over
-	$("#navigation").mouseenter(function() {
-		if ($(document).scrollTop() < 450) {
-			$("#navigation").removeClass("navbar-transparent", 500);
-		}
-	}).mouseleave(function() {
-		if ($(document).scrollTop() < 450) {
-			$("#navigation").addClass("navbar-transparent", 500);
-		}
-	});
-});
+ });
 
 $(document).scroll(function() {
 	// Grabbing the displacement from the top when scrolled and storing as a variable 'y'
 	var y = $(this).scrollTop();
 
-	if (y > 300) {
+	if (y > 275) {
 		$("#section1").fadeIn();
 	}
 	else {
@@ -30,11 +19,12 @@ $(document).scroll(function() {
 		$("#section1").fadeOut();
 	}
 	if (y > 450) {
-		$("#navigation").removeClass("navbar-static-top navbar-transparent").css("margin-top", "-50px").animate({"top" : "50px"},"slow").addClass("navbar-fixed-top");
+		$("#navigation").removeClass("navbar-static-top").css("margin-top", "-50px").animate({"top" : "50px"},"slow").addClass("navbar-fixed-top");
+		$("#carousel-example-generic").css("margin-top", "50px");
 		$("#section1").css("margin-top", "110px");
 	}
 	else{		
-		$("#navigation").removeClass("navbar-fixed-top").addClass("navbar-static-top navbar-transparent");
+		$("#navigation").removeClass("navbar-fixed-top").addClass("navbar-static-top");
 		$("#section1").css("margin-top", "40px");
 		$("#footer").fadeIn("slow");
 	}

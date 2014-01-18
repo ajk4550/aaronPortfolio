@@ -1,3 +1,14 @@
 body {
 	height:2025px;
 }
+
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+	margin-top: 22px;
+}
+
+.carousel-image {
+	height:496px !important;
+}
+#carousel-example-generic{
+	margin-top: -20px;
+}
